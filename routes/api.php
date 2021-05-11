@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CorporateRegistration;
+use App\Http\Controllers\IndividualController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('corporate_registration',CorporateRegistration::class);
+Route::resource('individual_registration',IndividualController::class);
